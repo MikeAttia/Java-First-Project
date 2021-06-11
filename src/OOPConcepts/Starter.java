@@ -1,6 +1,6 @@
 package OOPConcepts;
+import java.util.Scanner;
 
-//import constructurStyle.employee;
 
 public class Starter {
 
@@ -65,27 +65,55 @@ public class Starter {
 		//****************end of Employee*********************************************
 		
 		
+		Scanner scan = new Scanner(System.in);
+	    int studId;
+	    String studName;
+	    int studAge;
+	    char studGender;
+	    double subject1;
+	    double subject2;
+	    double subject3;
+	    
+	    System.out.println("Enter Student Id"); 
+	    studId = scan.nextInt();
+	    scan.nextLine();
+	    System.out.println("Enter Student Name");
+	    studName = scan.nextLine();
+	    System.out.println("Enter Student Age");
+	    studAge = scan.nextInt();
+	    System.out.println("Enter Student Gender");
+	    studGender = scan.next().charAt(0);
+	    System.out.println("Enter Math score");
+	    subject1 = scan.nextDouble();
+	    System.out.println("Enter Student English score");
+	    subject2 = scan.nextDouble();
+	    System.out.println("Enter Student Biology score");
+	    subject3 = scan.nextDouble();
+	   
+	            
 		
-		Student stud1=new Student(545,"Mark",14,'M',95.7,88.5,78.7);
-		Student stud2=new Student(545,"Ann",14,'F',85.1,66.5,91);
-		Student stud3=new Student(545,"Dina",14,'F',92.4,99,62.4);
-		Student stud4=new Student(545,"Sam",14,'M',79.9,75,69.9);
+		Student stud1=new Student(studId,studName,studAge,studGender,subject1,subject2,subject3);
+		
+//		Student stud2=new Student(545,"Ann",14,'F',85.1,66.5,91);
+//		Student stud3=new Student(545,"Dina",14,'F',92.4,99,62.4);
+//		Student stud4=new Student(545,"Sam",14,'M',79.9,75,69.9);
 		
 		stud1.display();
 		double avg=stud1.calculate(3);
 		System.out.println("Average score is:"+String.format("%.2f",avg));
-		stud2.display();
-		double avg2=stud2.calculate(3);
-		System.out.println("Average score is:"+String.format("%.2f",avg2));
-		stud3.display();
-		double avg3=stud3.calculate(3);
-		System.out.println("Average score is:"+String.format("%.2f",avg3));
-		stud4.display();
-		double avg4=stud4.calculate(3);
-		System.out.println("Average score is:"+String.format("%.2f",avg4));
+	     
+//		stud2.display();
+//		double avg2=stud2.calculate(3);
+//		System.out.println("Average score is:"+String.format("%.2f",avg2));
+//		stud3.display();
+//		double avg3=stud3.calculate(3);
+//		System.out.println("Average score is:"+String.format("%.2f",avg3));
+//		stud4.display();
+//		double avg4=stud4.calculate(3);
+//		System.out.println("Average score is:"+String.format("%.2f",avg4));
 		
 		
-
+      scan.close();
 	}
 
 }
