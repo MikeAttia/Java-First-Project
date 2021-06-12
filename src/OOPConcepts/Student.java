@@ -44,8 +44,9 @@ public class Student extends Person implements Personinterface {
 		
 		double average=((this.subject1+this.subject2+this.subject3)/totalsubjects);
 		return average;
-	}
-		
+	};
+	
+
 	}
 	
 	
