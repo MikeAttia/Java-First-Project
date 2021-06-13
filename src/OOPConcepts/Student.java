@@ -26,7 +26,9 @@ public class Student extends Person implements Personinterface {
 	}
 	
 	public void display() {
-		
+		System.out.println();
+		System.out.println("     Student Information");
+		System.out.println("     --------------------");
 		System.out.println(ORGANIZATION);
 		System.out.println("**************");
 		
@@ -45,6 +47,13 @@ public class Student extends Person implements Personinterface {
 		double average=((this.subject1+this.subject2+this.subject3)/totalsubjects);
 		return average;
 	};
+	
+   public int studNumber(int noOfPeople) {
+		
+		
+		return noOfPeople;
+		 
+	}
 	
 
 	}
